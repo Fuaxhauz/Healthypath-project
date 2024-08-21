@@ -1,0 +1,417 @@
+<html>
+  <head>
+    
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="./html.html"><img src="logo.png" alt="Logo" /> </a>
+      </div>
+      <div class="dropdown">
+        <button>Menu</button>
+        <div class="dropdown-content">
+          <a href="http://127.0.0.1:3000/VITAMINS.html">Vitamins</a>
+          <a href="./Herbs.html">Herbs</a>
+          <a href="./Calc.html">Insulin-related calculators</a>
+          <a href="./cal&macro.html">Calorie and macro calculator</a>
+          <a href="./Refrences.html">Refrences</a>
+          <a href="chatbot.html">chatbot</a>
+        </div>
+      </div>
+    </header>
+    
+    <button id="toggle-button">💬</button>
+
+    <div id="white-background" style="display: none;"><embed style="height: 750; width: 350;" src="https://cdn.botpress.cloud/webchat/v2/shareable.html?botId=4212310d-db46-4407-8dc2-40be951386a3"></div>
+    <div class="chat-box" style="display: none;">
+      
+  
+    </div>
+      
+        <div class="insulin-calculator-container calc-styl khand-semibold calcwah" style="display: inline-block; width: 50%;">
+
+          <h1>Insulin Dose Calculator</h1>
+
+          <form id="insulin-calculator-form">
+
+              <label for="insulin-calculator-bg-level">Blood Glucose Level (mg/dL):</label>
+
+              <input type="number" id="insulin-calculator-bg-level" class="insulin-calculator-input" required>
+
+              <label for="insulin-calculator-target-bg-level">Target Blood Glucose Level (mg/dL):</label>
+
+              <input type="number" id="insulin-calculator-target-bg-level" class="insulin-calculator-input" required>
+
+
+              <label for="insulin-calculator-ins-sensitivity">Insulin Sensitivity (mg/dL per unit of insulin):</label>
+
+              <input type="number" id="insulin-calculator-ins-sensitivity" class="insulin-calculator-input" required>
+
+
+              <label for="insulin-calculator-ins-to-carb">Insulin-to-Carb Ratio (grams of carbohydrate per unit of insulin):</label>
+
+              <input type="number" id="insulin-calculator-ins-to-carb" class="insulin-calculator-input" required>
+
+
+              <label for="insulin-calculator-total-daily-dose">Total Daily Dose of Insulin (units):</label>
+
+              <input type="number" id="insulin-calculator-total-daily-dose" class="insulin-calculator-input" required>
+
+
+              <label for="insulin-calculator-meal-carb">Meal Carbohydrate Intake (grams):</label>
+
+              <input type="number" id="insulin-calculator-meal-carb" class="insulin-calculator-input" required>
+
+
+              <button type="submit" id="insulin-calculator-submit">Calculate Insulin Dose</button>
+
+          </form>
+
+          <div id="insulin-calculator-result"></div>
+
+       </div>
+
+  <div class="diabetes-calculator-container calcwah khand-semibold" style="display: inline-block; width: 50%; margin-top: 20px;">
+      <h1>Diabetes Risk Calculator</h1>
+      <form id="diabetes-form">
+        <div class="form-group">
+          <label for="age">Age:</label>
+          <input type="number" id="age" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="weight">Weight (kg):</label>
+          <input type="number" id="weight" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="height">Height (cm):</label>
+          <input type="number" id="height" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="waist-circumference">Waist Circumference (cm):</label>
+          <input type="number" id="waist-circumference" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="physical-activity">Physical Activity:</label>
+          <select id="physical-activity" class="form-control" required>
+            <option value="sedentary">Sedentary</option>
+            <option value="lightly-active">Lightly Active</option>
+            <option value="moderately-active">Moderately Active</option>
+            <option value="very-active">Very Active</option>
+            <option value="extra-active">Extra Active</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="family-history">Family History of Diabetes:</label>
+          <select id="family-history" class="form-control" required>
+            <option value="no">No</option>
+            <option value="yes">Yes</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Calculate Risk</button>
+      </form>
+      <div id="result-container">
+        <h2 id="result-header">Your Diabetes Risk:</h2>
+        <p id="result-message"></p>
+      </div>
+  </div>
+
+</div>
+
+<div class="quicki-calculator-container khand-semibold calcwah" style="display: inline-block; width: 50%; vertical-align: top; border-radius: 5px; margin-top: 20;">
+
+  <h2 class="quicki-calculator-header">QUICKI Insulin Calculator</h2>
+
+  <form class="quicki-calculator-form">
+
+    <div class="quicki-calculator-input-field quicki-calculator-glucose-field">
+
+      <label class="quicki-calculator-label" for="glucose">Fasting Glucose Level (mg/dL)</label>
+
+      <input type="number" id="glucose" class="quicki-calculator-input quicki-calculator-glucose-input">
+
+    </div>
+
+    <div class="quicki-calculator-input-field quicki-calculator-insulin-field">
+
+      <label class="quicki-calculator-label" for="insulin">Fasting Insulin Level (µU/ml)</label>
+
+      <input type="number" id="insulin" class="quicki-calculator-input quicki-calculator-insulin-input">
+
+    </div>
+
+    <button class="quicki-calculator-button" id="calculate-button">Calculate QUICKI</button>
+
+    <div class="quicki-calculator-result" id="result"></div>
+
+    <div class="quicki-calculator-error" id="error"></div>
+
+  </form>
+
+</div>
+<script>const form = document.querySelector('#insulin-calculator-form');
+
+  const resultDiv = document.querySelector('#insulin-calculator-result');
+  
+  
+  form.addEventListener('submit', (e) => {
+  
+    e.preventDefault();
+  
+  
+    const bgLevel = parseFloat(document.querySelector('#insulin-calculator-bg-level').value);
+  
+    const targetBgLevel = parseFloat(document.querySelector('#insulin-calculator-target-bg-level').value);
+  
+    const insSensitivity = parseFloat(document.querySelector('#insulin-calculator-ins-sensitivity').value);
+  
+    const insToCarb = parseFloat(document.querySelector('#insulin-calculator-ins-to-carb').value);
+  
+    const totalDailyDose = parseFloat(document.querySelector('#insulin-calculator-total-daily-dose').value);
+  
+    const mealCarb = parseFloat(document.querySelector('#insulin-calculator-meal-carb').value);
+  
+  
+    // Validate user inputs
+  
+    let errors = [];
+  
+  
+    if (isNaN(bgLevel) || bgLevel <= 0) {
+  
+      errors.push('Invalid blood glucose level');
+  
+    }
+  
+    if (isNaN(targetBgLevel) || targetBgLevel <= 0) {
+  
+      errors.push('Invalid target blood glucose level');
+  
+    }
+  
+    if (isNaN(insSensitivity) || insSensitivity <= 0) {
+  
+      errors.push('Invalid insulin sensitivity');
+  
+    }
+  
+    if (isNaN(insToCarb) || insToCarb <= 0) {
+  
+      errors.push('Invalid insulin to carb ratio');
+  
+    }
+  
+    if (isNaN(totalDailyDose) || totalDailyDose <= 0) {
+  
+      errors.push('Invalid total daily dose');
+  
+    }
+  
+    if (isNaN(mealCarb) || mealCarb < 0) {
+  
+      errors.push('Invalid meal carb amount');
+  
+    }
+  
+  
+    if (errors.length > 0) {
+  
+      alert(`Error: ${errors.join(', ')}`);
+  
+      return;
+  
+    }
+  
+  
+    // Calculate total insulin dose
+  
+    const correctionDose = (bgLevel - targetBgLevel) / insSensitivity;
+  
+    const mealDose = mealCarb / insToCarb;
+  
+    const totalInsulinDose = correctionDose + mealDose;
+  
+  
+    // Display result
+  
+    resultDiv.textContent = `Your total insulin dose is: ${totalInsulinDose.toFixed(2)} units`;
+  
+  });
+  
+  window.onload = function() {
+
+const form = document.getElementById('diabetes-form');
+
+const resultContainer = document.getElementById('result-container');
+
+const resultHeader = document.getElementById('result-header');
+
+const resultMessage = document.getElementById('result-message');
+
+
+form.addEventListener('submit', (e) => {
+
+  e.preventDefault();
+
+  const age = parseInt(document.getElementById('age').value);
+
+  const weight = parseInt(document.getElementById('weight').value);
+
+  const height = parseInt(document.getElementById('height').value);
+
+  const waistCircumference = parseInt(document.getElementById('waist-circumference').value);
+
+  const physicalActivity = document.getElementById('physical-activity').value;
+
+  const familyHistory = document.getElementById('family-history').value;
+
+
+  const riskScore = calculateRiskScore(age, weight, height, waistCircumference, physicalActivity, familyHistory);
+
+
+  if (riskScore < 10) {
+
+    resultHeader.textContent = 'Low Risk';
+
+    resultMessage.textContent = 'You are at low risk of developing diabetes.';
+
+  } else if (riskScore < 20) {
+
+    resultHeader.textContent = 'Moderate Risk';
+
+    resultMessage.textContent = 'You are at moderate risk of developing diabetes.';
+
+  } else {
+
+    resultHeader.textContent = 'High Risk';
+
+    resultMessage.textContent = 'You are at high risk of developing diabetes.';
+
+  }
+
+
+  resultContainer.style.display = 'block';
+
+});
+
+
+function calculateRiskScore(age, weight, height, waistCircumference, physicalActivity, familyHistory) {
+
+  let riskScore = 0;
+
+
+  if (age > 45) {
+
+    riskScore += 5;
+
+  }
+
+
+  if (weight > 80) {
+
+    riskScore += 5;
+
+  }
+
+
+  if (height < 160) {
+
+    riskScore += 3;
+
+  }
+
+
+  if (waistCircumference > 90) {
+
+    riskScore += 5;
+
+  }
+
+
+  if (physicalActivity === 'sedentary') {
+
+    riskScore += 5;
+
+  }
+
+
+  if (familyHistory === 'yes') {
+
+    riskScore += 10;
+
+  }
+
+
+  return riskScore;
+
+}
+
+};
+
+const glucoseInput = document.getElementById('glucose');
+
+const insulinInput = document.getElementById('insulin');
+
+const calculateButton = document.getElementById('calculate-button');
+
+const resultElement = document.getElementById('result');
+
+const errorElement = document.getElementById('error');
+
+
+calculateButton.addEventListener('click', (e) => {
+
+e.preventDefault();
+
+const glucoseValue = parseFloat(glucoseInput.value);
+
+const insulinValue = parseFloat(insulinInput.value);
+
+
+if (isNaN(glucoseValue) || glucoseValue <= 0) {
+
+  errorElement.textContent = 'Invalid glucose value';
+
+  return;
+
+}
+
+
+if (isNaN(insulinValue) || insulinValue <= 0) {
+
+  errorElement.textContent = 'Invalid insulin value';
+
+  return;
+
+}
+
+
+const logGlucose = Math.log10(glucoseValue);
+
+const logInsulin = Math.log10(insulinValue);
+
+const quickiValue = 1 / (logInsulin + logGlucose);
+
+resultElement.textContent = `QUICKI: ${quickiValue.toFixed(3)}`; // Fixed typo here
+
+errorElement.textContent = '';
+
+
+if (quickiValue < 0.339) {
+
+  resultElement.textContent += ` (Insulin Resistance)`;
+
+}
+
+});</script>
+<script>const toggleButton = document.getElementById('toggle-button');
+  const whiteBackground = document.getElementById('white-background');
+  
+  toggleButton.addEventListener('click', () => {
+    whiteBackground.style.display = whiteBackground.style.display === 'none' ? 'block' : 'none';
+  });</script>
+
+  <script src="script.js"></script>
+  </body>
+</html>

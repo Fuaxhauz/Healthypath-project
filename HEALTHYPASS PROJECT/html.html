@@ -1,0 +1,55 @@
+<HTML>
+    <head>
+        <link rel="stylesheet" href="style.css"> 
+    </head>
+    <body>
+      <header>
+      <div class="logo">
+          <a href="./html"><img src="logo.png" alt="Logo"> </a>
+      </div>
+      <div class="dropdown ">
+        <button>Menu</button>
+        <div class="dropdown-content khand-regular">
+          <a href="http://127.0.0.1:3000/VITAMINS.html">Vitamins</a>
+          <a href="./Herbs.html">Herbs</a>
+          <a href="./Calc.html">Insulin-related calculators</a>
+          <a href="./cal&macro.html">Calorie and macro calculator</a>
+          <a href="./Refrences.html">Refrences</a>
+          <a href="chatbot.html">chatbot</a>
+          </div>
+      </div>
+  </header>
+    
+
+        <h1 class="FrontPage-Text khand-semibold" >
+            <span> 
+                    Our mission
+                <br>Is To provide help to all of those who Are
+                <br>Affected by diabetes
+                <br>and help them lead a normal life
+                <br>
+                <br>We provide a variety of tools
+                <br>ranging from an insulin intake calculator
+                <br>to a wide blog of information about nutrition
+                <br>and complementary medicine to help those affected by diabetes.
+            </span>                
+        </h1>
+        
+    </div>
+
+    
+ 
+    <button class="LS-b khand-regular">Log in<button class="LS-b khand-regular">Sign up</button>
+     
+    <button id="toggle-button">💬</button>
+
+    <div id="white-background" style="display: none;"><embed style="height: 750; width: 350;" src="https://cdn.botpress.cloud/webchat/v2/shareable.html?botId=4212310d-db46-4407-8dc2-40be951386a3"></div>
+    <div class="chat-box" style="display: none;">
+    
+    <script>const toggleButton = document.getElementById('toggle-button');
+        const whiteBackground = document.getElementById('white-background');
+        
+        toggleButton.addEventListener('click', () => {
+          whiteBackground.style.display = whiteBackground.style.display === 'none' ? 'block' : 'none';
+        });</script>
+    </body>

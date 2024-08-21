@@ -1,0 +1,807 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Khand:wght@300;400;500;600;700&display=swap');
+
+body {
+    margin: 0;
+    background-color: #103d61;
+}
+    .khand-light {
+    font-family: "Khand", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    }
+
+    .khand-regular {
+    font-family: "Khand", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    }
+
+    .khand-medium {
+    font-family: "Khand", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    }
+
+    .khand-semibold {
+    font-family: "Khand", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    }
+
+    .khand-bold {
+    font-family: "Khand", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    }
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #8bd8e0; /* Header background color: black */
+    color: #f39c12; /* Text color: orange */
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 64px;
+    width: 250px;
+    margin-right: 1rem;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown button {
+    background-color: #103d61; /* Dropdown button color: orange */
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dropdown button:hover {
+    background-color: #07253e; /* Slightly darker orange for hover effect */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: #8bd8e0;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    color: #333;
+}
+
+.dropdown-content a:hover {
+    background-color: #5eaab3;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.pill1 {
+    margin-left: 150px;
+    margin-top: 100px;
+
+
+}
+.pill2 {
+    margin-top: 350px;
+    margin-left: 1400px;
+}
+
+.hover-pills {
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+
+}
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 25px); }
+    100%   { transform: translate(0, -0px); }
+}
+
+.FrontPage-Text {
+    font-size: 25px;
+    color: #F8F0E3;
+    margin-left: 100px;
+    text-align: center;
+    margin-top: 50;
+
+}
+
+.LS-b {
+    background-color: #74bfc7;
+    border: none;
+    border-radius: 2px;
+    width: 100;
+    height: 50;
+    margin-left: 500px;
+    margin-top: 20px;
+    font-size: 15px;
+
+}
+
+.LS-b:hover {
+    background-color: #67b5be;
+}
+
+.Vit-d {
+    background-color: #74bfc7;
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 20px;
+    margin: 20px;
+    margin-top: 30px;
+}
+
+.Article-head {
+    text-align: center; 
+    color: aliceblue;
+    font-size: 30px;
+    
+}
+
+.eye-friendly-button {
+
+    background-color: #103d61;
+  
+    color: #f7f7f7;
+  
+    border: none;
+  
+    padding: 10px 20px;
+  
+    font-size: 16px;
+  
+    cursor: pointer;
+
+    border-radius: 4px;
+  
+  }
+  
+  
+  .eye-friendly-button:hover {
+  
+    background-color: #667786;
+  
+  }
+
+  .eye-friendly-mode article.eye-friendly {
+
+    background-color: #000000; /* light gray background */
+  
+    color: #969393; /* dark gray text */
+  
+    font-size: 18px; /* larger font size */
+  
+  }
+
+  .insulin-calculator-container {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.insulin-calculator-input {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+#insulin-calculator-submit {
+    width: 100%;
+    height: 40px;
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#insulin-calculator-submit:hover {
+    background-color: #3e8e41;
+}
+
+#insulin-calculator-result {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.calc-styl {
+    background-color: #74bfc7;
+
+}
+
+.diabetes-calculator-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.form-control {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+select.form-control {
+  padding: 10px;
+}
+
+button[type="submit"] {
+  width: 100%;
+  height: 40px;
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+#result-container {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#result-header {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#result-message {
+  font-size: 18px;
+  font-weight: bold;
+  color: #666;
+}
+
+.diabetes-calculator-container {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #74bfc7;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .form-control {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  select.form-control {
+    padding: 10px;
+  }
+  
+  button[type="submit"] {
+    width: 100%;
+    height: 40px;
+    background-color: #4CAF50;
+    color: #0a2f4f;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #3e8e41;
+  }
+  
+  #result-container {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #0a2f4f;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #result-header {
+    text-align: center;
+    margin-bottom: 10px;
+    color: white;
+  }
+  
+  #result-message {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+  }
+
+  css
+
+  .calculator-container {
+  
+    display: flex;
+  
+    flex-direction: row;
+  
+    flex-wrap: nowrap;
+  
+  }
+  
+  
+  .insulin-calculator-container,
+  
+  .diabetes-calculator-container {
+  
+    flex: 1;
+  
+    margin: 20px;
+  
+    padding: 20px;
+  
+    border: 1px solid #ccc;
+  
+    border-radius: 10px;
+  
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
+  }
+  
+  
+  .insulin-calculator-container {
+  
+    background-color: #f7f7f7;
+  
+  }
+  
+  
+  .diabetes-calculator-container {
+  
+    background-color: #f2f2f2;
+    margin-left: 10px;
+    
+  
+  }
+
+.calcwah {
+    height: 800;
+    width: 500%;
+    margin-top: 20px;
+    vertical-align: top;
+    
+}
+
+.quicki-calculator-container {
+
+    max-width: 300px;
+  
+    margin: 40px auto;
+  
+    padding: 20px;
+  
+    background-color: #f9f9f9;
+  
+    border: 1px solid #ccc;
+  
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
+  }
+  
+  
+  .quicki-calculator-header {
+  
+    font-size: 24px;
+  
+    font-weight: bold;
+  
+    margin-bottom: 20px;
+  
+  }
+  
+  
+  .quicki-calculator-form {
+  
+    margin-top: 20px;
+  
+  }
+  
+  
+  .quicki-calculator-input-field {
+  
+    margin-bottom: 20px;
+  
+  }
+  
+  
+  .quicki-calculator-label {
+  
+    display: block;
+  
+    margin-bottom: 10px;
+  
+  }
+  
+  
+  .quicki-calculator-input {
+  
+    width: 100%;
+  
+    height: 40px;
+  
+    padding: 10px;
+  
+    font-size: 18px;
+  
+    border: 1px solid #ccc;
+  
+  }
+  
+  
+  .quicki-calculator-button {
+  
+    background-color: #4CAF50;
+  
+    color: #fff;
+  
+    padding: 10px 20px;
+  
+    border: none;
+  
+    border-radius: 5px;
+  
+    cursor: pointer;
+  
+  }
+  
+  
+  .quicki-calculator-button:hover {
+  
+    background-color: #3e8e41;
+  
+  }
+  
+  
+  .quicki-calculator-result {
+  
+    font-size: 24px;
+  
+    font-weight: bold;
+  
+    margin-top: 20px;
+  
+  }
+  
+  
+  .quicki-calculator-error {
+  
+    color: red;
+  
+    font-size: 18px;
+  
+    margin-top: 10px;
+  
+  }
+
+
+  .calorie-calc-form {
+
+    max-width: 400px;
+  
+    margin: 40px auto;
+  
+    padding: 20px;
+  
+    border: 1px solid #ccc;
+  
+    border-radius: 10px;
+  
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
+  }
+  
+  
+  .calorie-calc-form label {
+  
+    display: block;
+  
+    margin-bottom: 10px;
+  
+  }
+  
+  
+  .calorie-calc-form input[type="number"],
+  
+  .calorie-calc-form select {
+  
+    width: 100%;
+  
+    height: 40px;
+  
+    margin-bottom: 20px;
+  
+    padding: 10px;
+  
+    border: 1px solid #ccc;
+  
+  }
+  
+  
+  .calorie-calc-form input[type="number"]:disabled {
+  
+    background-color: #ccc;
+  
+    cursor: not-allowed;
+  
+  }
+  
+  
+  .calorie-calc-button {
+  
+    background-color: #4CAF50;
+  
+    color: #fff;
+  
+    padding: 10px 20px;
+  
+    border: none;
+  
+    border-radius: 10px;
+  
+    cursor: pointer;
+  
+  }
+  
+  
+  .calorie-calc-button:hover {
+  
+    background-color: #3e8e41;
+  
+  }
+  
+  
+  .calorie-calc-result {
+  
+    margin-top: 20px;
+  
+    font-size: 24px;
+  
+    font-weight: bold;
+  
+    color: #666;
+  
+  }
+
+  .macro-calculator-title {
+
+    font-family: Arial, sans-serif;
+  
+    font-size: 24px;
+  
+    margin-bottom: 20px;
+  
+  }
+  
+  
+  .macro-calculator-form {
+  
+    width: 50%;
+  
+    margin: 40px auto;
+  
+    padding: 20px;
+  
+    border: none;
+  
+    border-radius: 10px;
+  
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
+    background-color: white;
+    
+    color: black;
+
+    vertical-align: top;
+    margin: 5%;
+  }
+  
+  
+  .macro-calories-label {
+  
+    display: block;
+  
+    margin-bottom: 10px;
+  
+  }
+  
+  
+  .macro-calories-input-field {
+  
+    width: 100%;
+  
+    height: 40px;
+  
+    margin-bottom: 20px;
+  
+    padding: 10px;
+  
+    border: 1px solid #ccc;
+  
+  }
+  
+  
+  .macro-calculate-button {
+  
+    width: 100%;
+  
+    height: 40px;
+  
+    background-color: #4CAF50;
+  
+    color: #fff;
+  
+    padding: 10px;
+  
+    border: none;
+  
+    border-radius: 5px;
+  
+    cursor: pointer;
+  
+  }
+  
+  
+  .macro-calculate-button:hover {
+  
+    background-color: #3e8e41;
+  
+  }
+  
+  
+  .macro-calculator-results {
+  
+    width: 50%;
+  
+    margin: 40px auto;
+  
+    padding: 20px;
+  
+    border: 1px solid #ccc;
+  
+    border-radius: 10px;
+  
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
+  }
+  
+  
+  .macro-carbohydrates-result, .macro-protein-result, .macro-fat-result {
+  
+    margin-bottom: 10px;
+  
+  }
+  
+  
+  .macro-carbohydrates-value, .macro-protein-value, .macro-fat-value {
+  
+    font-weight: bold;
+  
+  }
+
+
+
+  #white-background {
+    position: fixed;
+    bottom: 20px;
+    right: 70px; /* adjust the value to move the div to the left */
+    width: 350px;
+    height: 750px;
+    background-color: #ffffff;
+    z-index: 1000;
+    display: none;
+    border-radius: 20px;
+  }
+  
+  #toggle-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border: none;
+    border-radius: 50%;
+    background-color: #000;
+    color: #fff;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+
+.chatbox {
+  border-radius: 20px;
+}
+
+embed {
+  border-radius: 20px;
+}
+
+body {
+  border: none;
+}

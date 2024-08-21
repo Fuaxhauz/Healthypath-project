@@ -1,0 +1,188 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="./html.html"><img src="logo.png" alt="Logo" /></a>
+      </div>
+      <div class="dropdown khand-regular">
+        <button>Menu</button>
+        <div class="dropdown-content">
+          <a href="http://127.0.0.1:3000/VITAMINS.html">Vitamins</a>
+          <a href="./Herbs.html">Herbs</a>
+          <a href="./Calc.html">Insulin-related calculators</a>
+          <a href="./cal&macro.html">Calorie and macro calculator</a>
+          <a href="./Refrences.html">Refrences</a>
+          <a href="chatbot.html">chatbot</a>
+        </div>
+      </div>
+    </header>
+
+    <button id="toggle-button">💬</button>
+
+    <div id="white-background" style="display: none">
+      <embed
+        style="height: 750; width: 350"
+        src="https://cdn.botpress.cloud/webchat/v2/shareable.html?botId=4212310d-db46-4407-8dc2-40be951386a3"
+      />
+    </div>
+    <div class="chat-box" style="display: none"></div>
+    <article class="Vit-d eye-friendly">
+      <h1 class="Article-head">Herbs</h1>
+      <section>
+        <button
+          style="vertical-align: top"
+          class="eye-friendly-button"
+          onclick="toggleEyeFriendlyMode()"
+        >
+          Eye Friendly Mode
+        </button>
+        <h2>Introduction</h2>
+        <p>
+          Cinnamon, a popular spice derived from the bark of Cinnamomum trees,
+          has been used for centuries in cooking and traditional medicine.
+          Recent research suggests that cinnamon may offer potential benefits
+          for individuals with diabetes. This article explores the evidence
+          surrounding cinnamon's effects on blood sugar levels, insulin
+          sensitivity, and overall diabetes management.
+        </p>
+      </section>
+
+      <section>
+        <h2>How Cinnamon May Help with Diabetes</h2>
+        <p>
+          Cinnamon contains several bioactive compounds, including
+          cinnamaldehyde, which are believed to contribute to its health
+          benefits. The spice may influence diabetes management in the following
+          ways:
+        </p>
+
+        <h3>1. Improving Insulin Sensitivity</h3>
+        <p>
+          Insulin resistance is a key issue in Type 2 diabetes. Research
+          indicates that cinnamon may help improve insulin sensitivity, allowing
+          cells to better respond to insulin. A study published in the
+          <i>Journal of the American College of Nutrition</i> found that
+          cinnamon supplementation improved insulin sensitivity and reduced
+          fasting blood glucose levels in individuals with Type 2 diabetes.
+        </p>
+
+        <h3>2. Lowering Blood Sugar Levels</h3>
+        <p>
+          Cinnamon has been shown to have a positive effect on blood glucose
+          levels. A meta-analysis published in <i>Diabetes Care</i> reviewed
+          several clinical trials and concluded that cinnamon supplementation
+          could lead to a modest reduction in fasting blood glucose levels and
+          HbA1c, a marker of long-term blood sugar control.
+        </p>
+
+        <h3>3. Reducing Inflammation</h3>
+        <p>
+          Chronic inflammation is common in diabetes and can contribute to
+          insulin resistance. Cinnamon has anti-inflammatory properties that may
+          help reduce inflammation in the body. This can support overall
+          metabolic health and improve diabetes management.
+        </p>
+
+        <h3>4. Antioxidant Effects</h3>
+        <p>
+          Oxidative stress is another factor involved in diabetes complications.
+          Cinnamon is rich in antioxidants, which can help neutralize harmful
+          free radicals and protect cells from damage. This antioxidant effect
+          may play a role in reducing the risk of diabetes-related
+          complications.
+        </p>
+      </section>
+
+      <section>
+        <h2>How to Incorporate Cinnamon into Your Diet</h2>
+        <p>
+          Adding cinnamon to your diet can be simple and enjoyable. Here are
+          some tips for incorporating this spice into your meals:
+        </p>
+        <ul>
+          <li>
+            <strong>Sprinkle on Oatmeal:</strong> Add a dash of cinnamon to your
+            morning oatmeal for extra flavor and potential health benefits.
+          </li>
+          <li>
+            <strong>Blend into Smoothies:</strong> Mix cinnamon into your
+            favorite smoothie recipes for a tasty and nutritious boost.
+          </li>
+          <li>
+            <strong>Flavor Your Coffee:</strong> Sprinkle a little cinnamon into
+            your coffee or tea as a low-calorie flavor enhancer.
+          </li>
+          <li>
+            <strong>Use in Baking:</strong> Incorporate cinnamon into healthy
+            baking recipes, such as whole-grain muffins or healthy cookies.
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Recommended Dosages</h2>
+        <p>
+          While cinnamon can be beneficial, it's important to use it in
+          moderation. Excessive intake may lead to potential side effects, such
+          as liver damage due to the presence of coumarin in cassia cinnamon.
+          For most people, 1 to 2 teaspoons (2 to 4 grams) of cinnamon per day
+          is considered a safe and effective amount. Consult with a healthcare
+          provider before significantly increasing cinnamon intake or starting
+          supplementation, especially if you have existing health conditions or
+          are taking medications.
+        </p>
+      </section>
+
+      <section>
+        <h2>Conclusion</h2>
+        <p>
+          Cinnamon offers several potential benefits for individuals with
+          diabetes, including improving insulin sensitivity, lowering blood
+          sugar levels, reducing inflammation, and providing antioxidant
+          protection. Incorporating cinnamon into a balanced diet can be a tasty
+          and healthful way to support diabetes management. However, it should
+          be used as part of a comprehensive approach to diabetes care,
+          including a healthy diet, regular exercise, and proper medical
+          treatment.
+        </p>
+      </section>
+
+      <section>
+        <h2>References</h2>
+        <ul>
+          <li>
+            <i>Journal of the American College of Nutrition:</i> "Cinnamon and
+            Its Effect on Insulin Sensitivity and Glucose Levels."
+          </li>
+          <li>
+            <i>Diabetes Care:</i> "Effect of Cinnamon on Glycemic Control in
+            Diabetes: A Meta-Analysis."
+          </li>
+          <li>
+            <i>American Journal of Clinical Nutrition:</i> "Antioxidant
+            Properties of Cinnamon and Its Impact on Diabetes Management."
+          </li>
+        </ul>
+      </section>
+    </article>
+
+    <script>
+      const toggleButton = document.getElementById("toggle-button");
+      const whiteBackground = document.getElementById("white-background");
+
+      toggleButton.addEventListener("click", () => {
+        whiteBackground.style.display =
+          whiteBackground.style.display === "none" ? "block" : "none";
+      });
+
+      function toggleEyeFriendlyMode() {
+        document.body.classList.toggle("eye-friendly-mode");
+      }
+    </script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
